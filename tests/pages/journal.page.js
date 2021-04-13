@@ -83,8 +83,10 @@ class journalPage extends NativePage {
 
     verifyEveningJournalOnDashboard(commonConfig, date) {
         const toSelectFrom = testLocale === 'en' ? moment(date).format('dddd, MMMM Do') : moment(date).format('dddd, Do MMMM');
-        const getMoodText = $(this.pageElements.getMoodTextKey(toSelectFrom)).getText() + ' ' + $(this.pageElements.getMoodTextValue(toSelectFrom)).getText();
+        const getMoodText = testLocale === 'de' ? $(this.pageElements.getMoodTextKey(toSelectFrom)).getText() + ' ' + $(this.pageElements.getMoodTextValue(toSelectFrom)).getText() :
+            $(this.pageElements.getMoodTextKey(toSelectFrom)).getText() + '  ' + $(this.pageElements.getMoodTextValue(toSelectFrom)).getText();
         const finalTextoValidate = moment(date).format('dddd MMMM Do') + ' ' + getMoodText;
+        console.log(finalTextoValidate + " is to be compared for evening");
 
         //Generate message and validate against the canvas entry
         const wellbeingHeadline = jp.query(commonConfig, '$..graphs.wellbeing');
