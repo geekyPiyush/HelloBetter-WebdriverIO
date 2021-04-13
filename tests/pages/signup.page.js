@@ -10,24 +10,25 @@ class signUpPage extends NativePage {
 
     signupPatient(randomString) {
         const firstName = "First" + randomString;
+
+        //Signup first page
         $(this.pageElements.signupFirstName).setValue(firstName);
         $(this.pageElements.signupLastName).setValue("Last" + randomString);
         $(this.pageElements.signupEmail).setValue(randomString + "@ex.com");
         $(this.pageElements.signupPassword).setValue("Test432#" + randomString);
-
         $(this.pageElements.signupTrainingSelect).selectByIndex(1);
-
         $(this.pageElements.signupTermsCheckbox).click();
-
         $(this.pageElements.signupRegisterBtn).click();
 
+        //Welcome page
         $(this.pageElements.welcomeOkBtn).click();
-        $(this.pageElements.genderSelectMale).waitForExist({ timeout: 4000 });
 
+        //Gender selection
+        $(this.pageElements.genderSelectMale).waitForExist({ timeout: 4000 });
         $(this.pageElements.genderSelectMale).click();
 
+        //Birthday selection
         $(this.pageElements.birthDayInput).waitForDisplayed({ timeout: 4000 });
-
         $(this.pageElements.birthDayInput).setValue("10");
         $(this.pageElements.birthMonthInput).setValue("4");
         $(this.pageElements.birthYearInput).setValue("1996");
