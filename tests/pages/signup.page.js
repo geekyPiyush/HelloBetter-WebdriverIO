@@ -42,7 +42,7 @@ class signUpPage extends NativePage {
         const common = userData.getField('configLang');
         const logoutLinkText = jp.query(common, '$..logout');
         $(this.pageElements.logout(logoutLinkText)).click();
-        browser.pause(10000);
+        browser.pause(3000);
         const loginLink = jp.query(common, '$..log_in');
         expect($(this.pageElements.login(loginLink))).toBeVisible();
     }
