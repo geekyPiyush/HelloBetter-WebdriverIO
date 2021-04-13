@@ -1,0 +1,36 @@
+{
+    "name": "test-task-hellobetter",
+    "version": "1.0.0",
+    "description": "A test webdriver IO automation framework for HelloBetter QA code challenge",
+    "scripts": {
+        "test": "npx wdio wdio.conf.js --locale=%npm_config_locale%"
+    },
+    "author": "Piyush Nimoria",
+    "devDependencies": {
+        "@rpii/wdio-html-reporter": "0.8.6",
+        "@wdio/allure-reporter": "^5.22.4",
+        "@wdio/cli": "6.0.13",
+        "@wdio/cucumber-framework": "6.0.13",
+        "@wdio/local-runner": "6.0.13",
+        "@wdio/selenium-standalone-service": "^6.11.0",
+        "@wdio/spec-reporter": "5.22.4",
+        "@wdio/sync": "6.0.12",
+        "chromedriver": "80.0.2",
+        "cucumber-html-reporter": "5.2.0",
+        "eslint": "^6.8.0",
+        "selenium-standalone": "6.17.0",
+        "wdio-cucumber-parallel-execution": "^3.6.7",
+        "wdio-cucumberjs-json-reporter": "1.2.0"
+    },
+    "dependencies": {
+        "allure-commandline": "^2.13.8",
+        "axios": "^0.21.1",
+        "expect-webdriverio": "^2.0.1",
+        "fetch": "^1.1.0",
+        "jsonpath": "^1.1.1",
+        "moment": "^2.29.1",
+        "node-fetch": "^2.6.1",
+        "node-rest-client": "^3.1.0",
+        "xmlhttprequest": "^1.8.0"
+    }
+}
