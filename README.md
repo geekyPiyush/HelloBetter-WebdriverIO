@@ -7,6 +7,8 @@ Test automation framework for test application using WebdriverIO-CucumberBDD
 * Webdriver IO: v6.0
 * Cucumber : v6.0
 * Selenium: v6.17
+* Chrome driver : v89.0
+* Chrome browser : v89.0
 
 ## Steps to install and executed
 
